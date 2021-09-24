@@ -12,14 +12,19 @@
         <div class="form-group">
             <label for="firstName">FirstName</label>
             <input type="text" id="firstName" name="firstName" class="form-control" th:field="*{firstName}"/>
+            <div class="help-block alert alert-danger" th:if="${#fields.hasErrors('firstName')}">Required</div>
         </div>
         <div class="form-group">
             <label for="lastName">LastName</label>
             <input type="text" id="lastName" name="lastName" class="form-control" th:field="*{lastName}"/>
+            <div class="help-block alert alert-danger" th:if="${#fields.hasErrors('lastName')}">Required</div>
+
         </div>
         <div class="form-group">
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject" class="form-control" th:field="*{subject}"/>
+            <div class="help-block alert alert-danger" th:if="${#fields.hasErrors('subject')}">Required</div>
+
         </div>
         <div class="form-group">
             <div>
